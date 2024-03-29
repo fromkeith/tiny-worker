@@ -1,6 +1,6 @@
 {
   "name": "tiny-worker",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Tiny WebWorker for Server",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/avoidwork/tiny-worker.git"
+    "url": "https://github.com/fromkeith/tiny-worker.git"
   },
   "keywords": [
     "web",
@@ -19,9 +19,9 @@
   "author": "Jason Mulligan <jason.mulligan@avoidwork.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/avoidwork/tiny-worker/issues"
+    "url": "https://github.com/fromkeith/tiny-worker/issues"
   },
-  "homepage": "https://github.com/avoidwork/tiny-worker",
+  "homepage": "https://github.com/fromkeith/tiny-worker",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
