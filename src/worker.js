@@ -14,7 +14,7 @@ function toFunction (arg) {
 // Bootstraps the Worker
 process.once("message", obj => {
 	const { isfn, input, esm, cwd } = obj;
-	const exp = isfn ? toFunction(input) : esm ? `require("${input}");` : fs.readFileSync(input, "utf8");
+	const exp = isfn ? toFunction(input) : esm ? `import("file://${input.replace(/\\/g, '/')}");` : fs.readFileSync(input, "utf8");
 
 	global.self = {
 		close: () => {
@@ -63,7 +63,7 @@ process.once("message", obj => {
 	if (typeof exp === "function") {
 		exp();
 	} else {
-		vm.createScript(exp).runInThisContext();
+		new vm.Script(exp, { importModuleDynamically: vm.constants.USE_MAIN_CONTEXT_DEFAULT_LOADER }).runInThisContext();
 	}
 });
 
